@@ -11,10 +11,9 @@ export const Footer: FC = () => {
                 <S.FooterContainer>
                     <Logo />
                     <S.FooterContent>
-                        <p>© 2024 All rights reserved by codexcode.pl</p>
+                        <p>© 2024 All rights reserved</p>
                     </S.FooterContent>
                 </S.FooterContainer>
-                <Socials />
             </Container>
         </S.FooterStyled>
     );
