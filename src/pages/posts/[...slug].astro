@@ -1,0 +1,97 @@
+---
+import { Container } from "@components/Container";
+import BlogLayout from "@layouts/BlogLayout.astro";
+import { Hero } from "@modules/Hero";
+import { getCollection } from "astro:content";
+import * as S from "./styled";
+import { PostCardTag } from "@components/PostCard/styled";
+
+export async function getStaticPaths() {
+    const blogEntries = await getCollection("posts");
+    return blogEntries.map((entry) => ({
+        params: { slug: entry.slug },
+        props: { entry },
+    }));
+}
+const { entry } = Astro.props;
+const { author, description, image, pubDate, tags, title } = entry.data;
+const { Content } = await entry.render();
+
+// get all posts from the collection
+const allPosts = await getCollection("posts");
+
+/**
+ * for the related posts
+ * - get the current post slug
+ * - filter out the current post from the list of all posts
+ * - use the remaining posts as related posts
+ */
+const currentPostSlug = entry.slug; // Get the slug of the current post from the request parameters
+const relatedPosts = allPosts.filter((post) => post.slug !== currentPostSlug); // Filter out the current post---
+
+/**
+ * custom object to use in custom related posts component
+ */
+const relatedPostsObject = allPosts.map((post) => ({
+    background: post.data.image.url,
+    subtitle: "Related post",
+    title: post.data.title,
+    paragraph: post.data.description,
+    slug: post.slug,
+    button: {
+        text: "Take a look",
+        link: "/posts/" + post.slug,
+    },
+}));
+---
+
+<BlogLayout
+    title=`${title}`
+    description={title +
+        " - " +
+        description +
+        " - " +
+        tags.join(", ") +
+        " - " +
+        author.name}
+    data={entry.data}
+    previewImage={image.url}
+>
+    <Hero
+        heroType="ParallaxImage"
+        client:load
+        data={{
+            image: image.url,
+            content: {
+                title: title,
+                paragraph: description,
+            },
+        }}
+    />
+    <S.SinglePostWrapper>
+        <Container>
+            <S.SinglePostStyled>
+                <S.SinglePostMeta>
+                    <S.SinglePostMetaTags>
+                        {
+                            tags.map((tag, index) => (
+                                <PostCardTag key={index}>{tag}</PostCardTag>
+                            ))
+                        }
+                    </S.SinglePostMetaTags>
+                    <p><b>{author.name}</b> | {pubDate.toDateString()}</p>
+                </S.SinglePostMeta>
+                <Content />
+            </S.SinglePostStyled>
+        </Container>
+    </S.SinglePostWrapper>
+    {
+        relatedPosts.length >= 2 && (
+            <Hero
+                client:visible
+                heroType="fullPageSlider"
+                data={relatedPostsObject}
+            />
+        )
+    }
+</BlogLayout>

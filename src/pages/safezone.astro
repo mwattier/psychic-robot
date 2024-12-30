@@ -1,0 +1,42 @@
+---
+import { BlogCards } from "@modules/BlogCards";
+import Layout from "../layouts/Layout.astro";
+import { Hero } from "@modules/Hero";
+import { HeroSlider2 } from "@static/images";
+import { getCollection } from "astro:content";
+import { Footer } from "@modules/Footer";
+
+// get all posts from the posts collection
+const allPosts = await getCollection("posts");
+---
+
+<Layout
+    title="Cybernetic | Homepage"
+    description="YOUR META DESCRIPTION FOR SEO"
+>
+    <main class="page-content">
+        <Hero
+            client:load
+            heroType="fullPageSlider"
+            data={[
+                {
+                    subtitle: "Welcome to our safezone blog",
+                    title: "Safezone",
+                    background: HeroSlider2.src,
+                    paragraph:
+                        "You are in a safezone. Here you can find the latest news, articles, and updates about our dashboard updates, news & cybersecurity informations.",
+                },
+            ]}
+        />
+        {
+            allPosts && (
+                <BlogCards
+                    title="CyberNews & updates"
+                    description="Safezone security"
+                    cards={allPosts}
+                />
+            )
+        }
+    </main>
+    <Footer />
+</Layout>
