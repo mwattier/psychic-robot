@@ -1,0 +1,98 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Hero } from "@modules/Hero";
+import { HeroSlider3, InfiniteImg1, InfiniteImg2,VooPooListPage } from "@static/images";
+import { ServiceCards } from "@modules/ServiceCards";
+import { Footer } from "@modules/Footer";
+---
+
+<Layout
+    title="SPARK YOUR LIFE | VOOPOO"
+    description="YOUR META DESCRIPTION FOR SEO"
+>
+    <main class="page-content">
+        <Hero
+            heroType="ParallaxImage"
+            client:visible
+            data={{
+                image: VooPooListPage.src,
+                content: {
+                    title: "VOOPOO",
+                    paragraph:
+                        "SPARK YOUR LIFE",
+                },
+            }}
+        />
+        <ServiceCards
+            description="VAPORESSO"
+            title="Products"
+            client:visible
+            cards={[
+                {
+                    title: "Starter Kits & Mods",
+                    description:
+                        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum .",
+                },
+                {
+                    title: "Pod Systems",
+                    description:
+                        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum .",
+                },
+                {
+                    title: "Accessories",
+                    description:
+                        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum .",
+                },
+                {
+                    title: "Pod Systems",
+                    description:
+                        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum .",
+                },
+                {
+                    title: "Another Title",
+                    description:
+                        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum .",
+                },
+                {
+                    title: "Another Title Again",
+                    description:
+                        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum .",
+                },
+
+            ]}
+        />
+
+        <Hero
+            heroType="textImage"
+            client:visible
+            data={{
+                image: {
+                    src: VooPooListPage.src,
+                    width: 590,
+                    height: 300,
+                    alt: "Hero Image",
+                },
+                title: "Lets make you Infinite!",
+                paragraph:
+                    "Become a part of the Infinite community and start sharing your thoughts, ideas, and experiences with like-minded people.",
+            }}
+        />
+        <Hero
+            heroType="textImage"
+            client:visible
+            data={{
+                switchPlaces: true,
+                image: {
+                    src: VooPooListPage.src,
+                    width: 590,
+                    height: 300,
+                    alt: "Hero Image",
+                },
+                title: "Infinite Community",
+                paragraph:
+                    "with infinite dashboard you can easily manage your community, create posts, and interact with your followers.",
+            }}
+        />
+    </main>
+    <Footer />
+</Layout>

@@ -11,14 +11,17 @@ export const Navigation: FC = () => {
             <S.NavigationListWrapper $isOpen={isOpen}>
                 <S.NavigationList>
                     <li>
-                        <a href="/">Cybernetic</a>
+                        <a href="/">BEAST</a>
                     </li>
                     <li>
-                        <a href="/safezone">SafeZone</a>
+                        <a href="/safezone">Shop Now</a>
                     </li>
                     <li>
-                        <a href="/infinite">Infinite</a>
+                        <a href="/vaporesso">Vaporesso</a>
                     </li>
+                    <li>
+                        <a href="/voopoo">VooPoo</a>
+                    </li>                    
                     <li>
                         <a href="/contact">Contact</a>
                     </li>

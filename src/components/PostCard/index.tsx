@@ -46,15 +46,6 @@ export const PostCard: FC<PostCardProps> = ({
             {description && (
                 <S.PostCardDescription>{description}</S.PostCardDescription>
             )}
-            {author && (
-                <S.PostCardAuthorAvatar>
-                    <Image src={author.avatar} alt={author.name} />
-                    <S.PostCardAuthorInfo>
-                        <p>{author.name}</p>
-                        {pubDate && <p>{pubDate.toDateString()}</p>}
-                    </S.PostCardAuthorInfo>
-                </S.PostCardAuthorAvatar>
-            )}
         </S.PostCardStyled>
     );
 };

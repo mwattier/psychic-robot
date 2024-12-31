@@ -3,9 +3,13 @@ import PreviewPng from "./preview.webp";
 import HeroImg from "./hero-img.webp";
 import Logo from "./logo.webp";
 
-import HeroSlider1 from "./hero-slider-01.webp";
-import HeroSlider2 from "./hero-slider-02.webp";
-import HeroSlider3 from "./hero-slider-03.webp";
+import HeroSlider1 from "./beast/hero-slider-beast.jpg";
+import HeroSlider2 from "./beast/hero-slider-vaporesso.jpg";
+import HeroSlider3 from "./beast/hero-slider-voopoo.jpg";
+import HeroSliderVaporesso from "./beast/hero-slider-vaporesso.jpg";
+
+import VooPooListPage from "./beast/hero-slider-voopoo-list.jpg";
+import VaporessoListPage from "./beast/hero-slider-vaporesso.jpg";
 
 import InfiniteImg1 from "./infinite-img-1.webp";
 import InfiniteImg2 from "./infinite-img-2.webp";
@@ -70,4 +74,7 @@ export {
     HeroSlider3,
     InfiniteImg1,
     InfiniteImg2,
+    VooPooListPage,
+    VaporessoListPage,
+    HeroSliderVaporesso,
 };

@@ -1,11 +1,11 @@
 ---
-import { HeroSlider1, HeroSlider2, HeroSlider3 } from "@static/images";
+import { HeroSlider1, HeroSlider2, HeroSlider3,HeroSliderVaporesso } from "@static/images";
 import Layout from "../layouts/Layout.astro";
 import { Hero } from "@modules/Hero";
 ---
 
 <Layout
-    title="Cybernetic | Homepage"
+    title="BEAST DISTRIBUTION | Homepage"
     description="YOUR META DESCRIPTION FOR SEO"
 >
     <main class="page-content">
@@ -14,20 +14,9 @@ import { Hero } from "@modules/Hero";
             heroType="fullPageSlider"
             data={[
                 {
-                    subtitle: "Cybernetic",
-                    title: "Cybernetic",
+                    subtitle: "Vape - Delta - Smokeshop",
+                    title: "THE BEAST ADVANTAGE",
                     background: HeroSlider1.src,
-                    paragraph:
-                        "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                    button: {
-                        text: "Take a look",
-                        link: "/",
-                    },
-                },
-                {
-                    subtitle: "Cyberspace",
-                    title: "safezone",
-                    background: HeroSlider2.src,
                     paragraph:
                         "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                     button: {
@@ -36,13 +25,24 @@ import { Hero } from "@modules/Hero";
                     },
                 },
                 {
-                    subtitle: "Be Safe, Be Secure, Be Cybernetic",
-                    title: "infinite",
+                    subtitle: "Move Beyond Ordinary",
+                    title: "vaporesso",
+                    background: HeroSliderVaporesso.src,
+                    paragraph:
+                        "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    button: {
+                        text: "Take a look",
+                        link: "/vaporesso",
+                    },
+                },
+                {
+                    subtitle: "Spark Your Life",
+                    title: "voopoo",
                     background: HeroSlider3.src,
                     paragraph: "",
                     button: {
                         text: "Take a look",
-                        link: "/infinite",
+                        link: "/voopoo",
                     },
                 },
             ]}

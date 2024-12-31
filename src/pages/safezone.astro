@@ -11,7 +11,7 @@ const allPosts = await getCollection("posts");
 ---
 
 <Layout
-    title="Cybernetic | Homepage"
+    title="Beast Distribution | TPE"
     description="YOUR META DESCRIPTION FOR SEO"
 >
     <main class="page-content">
@@ -20,19 +20,19 @@ const allPosts = await getCollection("posts");
             heroType="fullPageSlider"
             data={[
                 {
-                    subtitle: "Welcome to our safezone blog",
-                    title: "Safezone",
+                    subtitle: "Beast Distribution",
+                    title: "BRANDS & PRODUCTS",
                     background: HeroSlider2.src,
                     paragraph:
-                        "You are in a safezone. Here you can find the latest news, articles, and updates about our dashboard updates, news & cybersecurity informations.",
+                        "The latest and most profitable in Vape, Delta, SmokeShop products",
                 },
             ]}
         />
         {
             allPosts && (
                 <BlogCards
-                    title="CyberNews & updates"
-                    description="Safezone security"
+                    title="Brands & Categories"
+                    description="Beast Distribution"
                     cards={allPosts}
                 />
             )
