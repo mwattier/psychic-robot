@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Hero } from "@modules/Hero";
-import { HeroSlider3, InfiniteImg1, InfiniteImg2,HeroSliderVaporesso,VaporessoListPage } from "@static/images";
+import { HeroSlider3, InfiniteImg1, InfiniteImg2,HeroSliderVaporesso,VaporessoListPage,VaporessoListPageTop } from "@static/images";
 import { ServiceCards } from "@modules/ServiceCards";
 import { Footer } from "@modules/Footer";
 ---
@@ -15,11 +15,11 @@ import { Footer } from "@modules/Footer";
             heroType="ParallaxImage"
             client:visible
             data={{
-                image: HeroSliderVaporesso.src,
+                image: VaporessoListPageTop.src,
                 content: {
-                    title: "VAPORESSO",
+                    title: "",
                     paragraph:
-                        "MOVE BEYOND ORDINARY",
+                        "",
                 },
             }}
         />

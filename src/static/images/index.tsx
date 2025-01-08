@@ -8,8 +8,11 @@ import HeroSlider2 from "./beast/hero-slider-vaporesso.jpg";
 import HeroSlider3 from "./beast/hero-slider-voopoo.jpg";
 import HeroSliderVaporesso from "./beast/hero-slider-vaporesso.jpg";
 
-import VooPooListPage from "./beast/hero-slider-voopoo-list.jpg";
+// import VooPooListPage from "./beast/hero-slider-voopoo-list.jpg";
+//
+import VooPooListPage from "./vaporesso-brandpage-sample.png";
 import VaporessoListPage from "./beast/hero-slider-vaporesso.jpg";
+import VaporessoListPageTop from "./vaporesso-brandpage-sample.png";
 
 import InfiniteImg1 from "./infinite-img-1.webp";
 import InfiniteImg2 from "./infinite-img-2.webp";
@@ -76,5 +79,6 @@ export {
     InfiniteImg2,
     VooPooListPage,
     VaporessoListPage,
+    VaporessoListPageTop,
     HeroSliderVaporesso,
 };
