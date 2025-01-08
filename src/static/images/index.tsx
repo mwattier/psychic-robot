@@ -11,8 +11,11 @@ import HeroSliderVaporesso from "./beast/hero-slider-vaporesso.jpg";
 // import VooPooListPage from "./beast/hero-slider-voopoo-list.jpg";
 //
 import VooPooListPage from "./vaporesso-brandpage-sample.png";
+import VooPooListPageTop from "./vaporesso-brandpage-sample.png";
+
 import VaporessoListPage from "./beast/hero-slider-vaporesso.jpg";
-import VaporessoListPageTop from "./vaporesso-brandpage-sample.png";
+//import VaporessoListPageTop from "./beast/hero-slider-vaporesso.jpg";
+import VaporessoListPageTop from "./vaporesso-brandpage-sample2.png";
 
 import InfiniteImg1 from "./infinite-img-1.webp";
 import InfiniteImg2 from "./infinite-img-2.webp";
@@ -78,6 +81,7 @@ export {
     InfiniteImg1,
     InfiniteImg2,
     VooPooListPage,
+    VooPooListPageTop,
     VaporessoListPage,
     VaporessoListPageTop,
     HeroSliderVaporesso,
